@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamiento con left, right, none e inherit</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 300px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      margin-bottom: 10px;
+    }
+
+    
+    .left {
+      position: relative;
+      left: 50px; 
+    }
+
+    
+    .right {
+      position: relative;
+      right: 50px; 
+    }
+
+    .none {
+      position: static; 
+    }
+
+    .inherit {
+      position: inherit; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box left">Left</div>
+    <div class="box right">Right</div>
+    <div class="box none">None</div>
+    <div class="box inherit">Inherit</div>
+  </div>
+</body>
+</html>

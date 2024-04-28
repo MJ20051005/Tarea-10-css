@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visibilidad y Desbordamiento </title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 300px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .content {
+      height: 150px;
+      background-color: #f0f0f0;
+      border: 1px solid #999;
+      padding: 10px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <p>Contenido de ejemplo</p>
+      <p>Contenido de ejemplo</p>
+      <p>Contenido de ejemplo</p>
+      <p>Contenido de ejemplo</p>
+      <p>Contenido de ejemplo</p>
+    </div>
+    <div>
+      <button onclick="toggleVisibility()">Toggle Visibility</button>
+      <button onclick="toggleOverflow()">Toggle Overflow</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility() {
+      var content = document.querySelector('.content');
+      content.style.visibility = content.style.visibility === 'visible' ? 'hidden' : 'visible';
+    }
+
+    function toggleOverflow() {
+      var content = document.querySelector('.content');
+      content.style.overflow = content.style.overflow === 'scroll' ? 'auto' : 'scroll';
+    }
+  </script>
+</body>
+</html>
